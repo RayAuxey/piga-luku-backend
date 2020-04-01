@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+// Require Dependancies
 const express = require("express"),
   mongoose = require("mongoose"),
   morgan = require("morgan"),
@@ -18,10 +19,14 @@ mongoose.connect(
 
 const app = express();
 
+// App Set Up
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
+
+// Routes Configuration
+app.use("/api/user", require("./routes/user.routes"));
 
 const PORT = 7003 || process.env.PORT;
 
