@@ -27,6 +27,7 @@ app.use(cors());
 
 // Routes Configuration
 app.use("/api/user", require("./routes/user.routes"));
+app.use("/api/products", require("./routes/product.routes"));
 
 const PORT = 7003 || process.env.PORT;
 
