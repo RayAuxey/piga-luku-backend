@@ -25,7 +25,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-// Routes Configuration
+// Serve Frontend
+app.use("/pigaluku", express.static("public"));
+
+// Routes Configuration for the API
 app.use("/pigaluku/api/user", require("./routes/user.routes"));
 app.use("/pigaluku/api/products", require("./routes/product.routes"));
 
