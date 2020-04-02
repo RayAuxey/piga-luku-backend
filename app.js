@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Serve Frontend
-app.use("/pigaluku", express.static("public"));
+app.use(express.static("public"));
 
 // Routes Configuration for the API
 app.use("/pigaluku/api/user", require("./routes/user.routes"));
