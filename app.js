@@ -5,8 +5,7 @@ const express = require("express"),
   mongoose = require("mongoose"),
   morgan = require("morgan"),
   cors = require("cors"),
-  bodyParser = require("body-parser"),
-  history = require("connect-history-api-fallback");
+  bodyParser = require("body-parser");
 
 // Connect to Mongo DB
 mongoose.connect(
@@ -25,7 +24,6 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(history());
 
 // Serve Frontend
 app.use("/", express.static("public"));
