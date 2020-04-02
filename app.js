@@ -26,8 +26,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Routes Configuration
-app.use("/api/user", require("./routes/user.routes"));
-app.use("/api/products", require("./routes/product.routes"));
+app.use("/pigaluku/api/user", require("./routes/user.routes"));
+app.use("/pigaluku/api/products", require("./routes/product.routes"));
 
 const PORT = 7003 || process.env.PORT;
 
