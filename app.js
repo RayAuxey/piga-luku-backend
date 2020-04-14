@@ -32,7 +32,7 @@ app.use("/", express.static("public"));
 app.use("/api/user", require("./routes/user.routes"));
 app.use("/api/products", require("./routes/product.routes"));
 
-const PORT = 7003 || process.env.PORT;
+const PORT = 7005 || process.env.PORT;
 
 // Trying Github actions
 // Try two
