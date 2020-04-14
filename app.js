@@ -35,6 +35,7 @@ app.use("/api/products", require("./routes/product.routes"));
 const PORT = 7003 || process.env.PORT;
 
 // Trying Github actions
+// Try two
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
