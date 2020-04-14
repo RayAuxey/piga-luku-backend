@@ -13,4 +13,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cd projects/piga-luku-backend;git pull
+        script: eval "$(ssh-agent -s)";ssh-add ~/.ssh/github.com;cd projects/piga-luku-backend;git pull
