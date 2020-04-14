@@ -13,7 +13,7 @@ mongoose.connect(
   {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   }
 );
 
@@ -34,6 +34,7 @@ app.use("/api/products", require("./routes/product.routes"));
 
 const PORT = 7003 || process.env.PORT;
 
+// Trying Github actions
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
